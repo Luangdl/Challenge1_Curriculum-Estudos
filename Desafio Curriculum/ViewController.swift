@@ -16,7 +16,7 @@ class ViewController: UITableViewController {
         
         var filme: Filme
         
-        filme = Filme (nome: "Viúva Negra", ano: "Lançamento em: 8 de julho de 2021 ", imagem: UIImage(named: "viuvaNegra")!)
+        filme = Filme (nome: "Viúva Negra", ano: "Lançamento em: 8 de julho de 2021 ", imagem: UIImage(named: "Black_Widow_July_9_Poster")!)
         filmes.append(filme)
         
         filme = Filme (nome: "Capitã Marvel", ano: "Lançamento em: 7 de março de 2019", imagem: UIImage(named: "CaptaMarvel")!)
@@ -37,10 +37,10 @@ class ViewController: UITableViewController {
         filme = Filme (nome: "Vingadores - Guerra Infinita", ano: "Lançamento em: 26 de abril de 2018", imagem: UIImage(named: "vingadoresGuerraInfinita")!)
         filmes.append(filme)
         
-        filme = Filme (nome: "Capitão América    Guerra Civil", ano: "Lançamento em: 28 de abril de 2016 ", imagem: UIImage(named: "capitaoAmericaGuerraCivil")!)
+        filme = Filme (nome: "Capitão América - Guerra Civil", ano: "Lançamento em: 28 de abril de 2016 ", imagem: UIImage(named: "capitaoAmericaGuerraCivil")!)
         filmes.append(filme)
         
-        filme = Filme (nome: "Capitão América Soldado Invernal", ano: "Lançamento em: 10 de abril de 2014", imagem: UIImage(named: "capitaoAmericaSoldadoInvernal")!)
+        filme = Filme (nome: "Capitão América - Soldado Invernal", ano: "Lançamento em: 10 de abril de 2014", imagem: UIImage(named: "capitaoAmericaSoldadoInvernal")!)
         filmes.append(filme)
         
     }
@@ -59,7 +59,7 @@ class ViewController: UITableViewController {
         
         let celulaReuso = "celulaReuso"
         let celula = tableView.dequeueReusableCell(withIdentifier: celulaReuso, for: indexPath) as! FilmeCelula
-        celula.imagemView?.image = filme.imagem
+        celula.imagemView.image = filme.imagem
         celula.nomeCell.text = filme.nome
         celula.anoCell.text = filme.ano
       
@@ -70,6 +70,7 @@ class ViewController: UITableViewController {
        // celula.imageView?.image = filme.imagem
     
         return celula
+        
         
     }
     
